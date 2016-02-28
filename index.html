@@ -1,24 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
-  <style type="text/css">
-    * { margin: 0; padding: 0; }
+  <title>Rick Fletcher</title>
 
-    h1 {
-      font: 40px/60px helvetica, arial, verdana;
-      height: 60px;
-      left: 100px;
-      margin-top: -30px;
-      position: absolute;
-      top: 25%;
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAzUExURfv08tWFccBIKslhR9F5Y81tVcRUOOKqnNmSgOrDuea2qt6ejvPb1e7Px////7w8HP///28J/JUAAAARdFJOU/////////////////////8AJa2ZYgAAAGJJREFUeNqUz0kOgDAIAEDormXp/19rbW1EPcmFMAkbNH1EA1OkklRvcDsJWyiiIVpgGamDD9UhRqLoJyAIgxAA5wlaxeOmzKulw5jxD9wJtKBvoaBZhJLaw674wvv9Q4ABAPbEDVLIvFhOAAAAAElFTkSuQmCC" />
+
+  <style>
+    * {
+      font-family: inconsolata, monospace;
+      font-size:   12px;
+      font-weight: normal;
+      line-height: 1.4em;
+      margin:      0;
+      padding:     0;
     }
 
-    h1 a {
-      color: #3063c3;
+    body {
+      height:      8em;
+      left:        50%;
+      margin-left: -18ch;
+      margin-top:  -4em;
+      position:    absolute;
+      top:         30%;
+      width:       36ch;
+    }
+
+    h1,
+    h2 {
+      margin-bottom: 1em;
+    }
+
+    li {
+      list-style-type: none;
+      margin-left:     2ch;
+    }
+
+    li li {
+      margin-left: 2ch;
+    }
+
+    h1::before,
+    h2::before,
+    li::before {
+      margin-right: 1ch;
+    }
+
+    h1::before { content: "#"; }
+    h2::before { content: "##"; }
+    li::before {
+      content:     "-";
+      margin-left: -2ch;
+      position:    absolute;
     }
   </style>
 </head>
 <body>
-  <h1><a href="http://github.com/rfletcher">rfletcher</a>.github.com</h1>
+  <h1>Rick Fletcher</h1>
+
+  <ul>
+    <li>Code hosted by <a href="http://www.github.com/rfletcher" rel="me">GitHub</a></li>
+    <li>Music logged with <a href="http://www.last.fm/user/fletch" rel="me">Last.fm</a></li>
+    <li>Employment summarized at <a href="http://www.linkedin.com/in/rfletcher" rel="me">LinkedIn</a></li>
+    <li>Time wasted on
+      <a href="http://www.twitter.com/fletch" rel="me">Twitter</a>,
+      <a href="http://www.instagram.com/fletch" rel="me">Instagram</a>, and
+      <a href="http://www.facebook.com/fletch" rel="me">Facebook</a>
+    </li>
+  </ul>
 </body>
 </html>
