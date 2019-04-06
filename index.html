@@ -7,6 +7,21 @@
   <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAzUExURfv08tWFccBIKslhR9F5Y81tVcRUOOKqnNmSgOrDuea2qt6ejvPb1e7Px////7w8HP///28J/JUAAAARdFJOU/////////////////////8AJa2ZYgAAAGJJREFUeNqUz0kOgDAIAEDormXp/19rbW1EPcmFMAkbNH1EA1OkklRvcDsJWyiiIVpgGamDD9UhRqLoJyAIgxAA5wlaxeOmzKulw5jxD9wJtKBvoaBZhJLaw674wvv9Q4ABAPbEDVLIvFhOAAAAAElFTkSuQmCC" />
 
   <style>
+    root: {
+      --link-color: blue;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      a:visited { color: #8D8E97; }
+      a:link    { color: #8D8E97; }
+      a:active  { color: #847572; }
+
+      body {
+        background-color: rgb(48, 50, 53);
+        color: #DCD8CB;
+      }
+    }
+
     * {
       font-family: "SF mono", menlo, inconsolata, inconsolata-dz, monospace;
       font-size:   1em;
