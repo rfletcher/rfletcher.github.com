@@ -3,9 +3,13 @@
 Cookies:
 <dl></dl>
 <script>
-  const response = await fetch('https://ap.lijit.com/readerinfo?loc=sovrn.com');
-  const response_obj = await response.json();
-  dl.innerHTML = JSON.stringify(response_obj);
+  const getCookies = async function() {
+    const response = await fetch('https://ap.lijit.com/readerinfo?loc=sovrn.com', {credentials: "include"});
+    const response_obj = await response.json();
+    dl.innerHTML = JSON.stringify(response_obj);
+  }
+
+  getCookies();
 </script>
 </body>
 </html>
