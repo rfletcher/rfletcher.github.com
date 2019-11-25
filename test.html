@@ -4,14 +4,28 @@ Cookies:
 <dl></dl>
 <script>
   const getCookies = async function() {
-    var dl = document.getElementsByTagName("dl")[0];
+    var cookie_name;
 
     const response = await fetch('https://ap.lijit.com/readerinfo?loc=sovrn.com', {credentials: "include"});
     const response_obj = await response.json();
 
-    dl.innerHTML = JSON.stringify(response_obj);
+    for(var cookie_name in response_obj) {
+      showCookie(cookie_name, response_obj[cookie_name]);
+    }
   }
 
+  const showCookie = function(name, value) {
+    var dt, dd, dl = document.getElementsByTagName("dl")[0];
+
+    dt = document.createElement('dt');
+    dt.appendChild(document.createTextNode(name));
+    dl.appendChild(dt);
+
+    dd = document.createElement('dd');
+    dd.appendChild(document.createTextNode(value));
+    dd.appendChild(dd);
+  }
+  
   getCookies();
 </script>
 </body>
