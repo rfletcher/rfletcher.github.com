@@ -1,87 +1,38 @@
 <!doctype html>
 <html>
 <head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Rick Fletcher</title>
 
   <link rel="canonical" href="https://flet.ch" />
   <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAzUExURfv08tWFccBIKslhR9F5Y81tVcRUOOKqnNmSgOrDuea2qt6ejvPb1e7Px////7w8HP///28J/JUAAAARdFJOU/////////////////////8AJa2ZYgAAAGJJREFUeNqUz0kOgDAIAEDormXp/19rbW1EPcmFMAkbNH1EA1OkklRvcDsJWyiiIVpgGamDD9UhRqLoJyAIgxAA5wlaxeOmzKulw5jxD9wJtKBvoaBZhJLaw674wvv9Q4ABAPbEDVLIvFhOAAAAAElFTkSuQmCC" />
-
-  <style>
-    root: {
-      --link-color: blue;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      a:visited { color: #8D8E97; }
-      a:link    { color: #8D8E97; }
-      a:active  { color: #847572; }
-
-      body {
-        background-color: rgb(48, 50, 53);
-        color: #DCD8CB;
-      }
-    }
-
-    * {
-      font-family: "SF mono", menlo, inconsolata, inconsolata-dz, monospace;
-      font-size:   1em;
-      font-weight: normal;
-      line-height: 1.4em;
-      margin:      0;
-      padding:     0;
-    }
-
-    body {
-      font-size:   0.75em;
-      height:      8em;
-      left:        50%;
-      margin-left: -18ch;
-      margin-top:  -4em;
-      position:    absolute;
-      top:         30%;
-      width:       36ch;
-    }
-
-    h1,
-    h2 {
-      margin-bottom: 1em;
-    }
-
-    li {
-      list-style-type: none;
-      margin-left:     2ch;
-    }
-
-    li li {
-      margin-left: 2ch;
-    }
-
-    h1::before,
-    h2::before,
-    li::before {
-      margin-right: 1ch;
-    }
-
-    h1::before { content: "#"; }
-    h2::before { content: "##"; }
-    li::before {
-      content:     "-";
-      margin-left: -2ch;
-      position:    absolute;
-    }
-  </style>
+  <link rel="stylesheet" href="css/global.css" />
 </head>
 <body>
-  <h1>Rick Fletcher</h1>
+  <main>
+    <h1>Rick Fletcher</h1>
 
-  <ul>
-    <li>Code hosted by <a href="https://www.github.com/rfletcher" rel="me">GitHub</a></li>
-    <li>Music logged with <a href="https://www.last.fm/user/fletch" rel="me">Last.fm</a></li>
-    <li>Employment summarized at <a href="https://www.linkedin.com/in/rfletcher" rel="me">LinkedIn</a></li>
-    <li>Time wasted on
-      <a href="https://www.twitter.com/fletch" rel="me">Twitter</a> and
-      <a href="https://www.instagram.com/fletch" rel="me">Instagram</a>
-    </li>
-  </ul>
+    <ul>
+      <li>Code hosted by&nbsp;<a href="https://www.github.com/rfletcher" rel="me">GitHub</a></li>
+      <li>
+        Music logged with <a href="https://www.last.fm/user/fletch" rel="me">Last.fm</a>,
+        movies on&nbsp;<a href="https://letterboxd.com/rfletcher" rel="me">Letterboxd</a>
+      </li>
+      <li>Employment summarized
+        at&nbsp;<a href="https://www.linkedin.com/in/rfletcher" rel="me">LinkedIn</a>
+      </li>
+      <li>Time wasted on
+        <a href="https://www.twitter.com/fletch" rel="me">Twitter</a>
+        and&nbsp;<a href="https://www.instagram.com/fletch" rel="me">Instagram</a>
+      </li>
+    </ul>
+
+    <footer>
+      Look! It's <a href="markdown.css.html">Markdown.css</a>
+    </footer>
+  </main>
 </body>
 </html>

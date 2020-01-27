@@ -1,0 +1,114 @@
+@import 'markdown.css';
+
+/* default color scheme */
+:root {
+  --foreground-color:        black;
+  --background-color:        white;
+  --background-shaded-color: #eee;
+
+  --accent-color:            darkgray;
+  --heading-color:           black;
+  --muted-color:             darkgray;
+
+  --link-color:              blue;
+  --visited-link-color:      purple;
+  --active-link-color:       red;
+}
+
+/* dark-mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-color:        rgb(237, 237, 237);
+    --background-color:        rgb(26, 26, 26);
+    --background-shaded-color: rgb(43, 43, 44);
+
+    --accent-color:            rgb(147, 157, 115);
+    --heading-color:           rgb(204, 120, 89);
+    --muted-color:             rgb(100, 96, 101);
+
+    --link-color:              rgb(147, 157, 115);
+    --visited-link-color:      rgb(159, 141, 160);
+    --active-link-color:       rgb(199, 178, 134);
+  }
+}
+
+* {
+  font-family: "SF mono", menlo, inconsolata, inconsolata-dz, monospace;
+  font-size:   1em;
+  font-weight: normal;
+  line-height: 1.4em;
+  margin:      0;
+  padding:     0;
+}
+
+body {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+
+  font-size:       0.75rem;
+
+  margin:          0 auto;
+  min-height:      60vh;
+  padding-top:     8vw;
+  padding-bottom:  8vw;
+  width:           80vw;
+}
+
+main {
+  max-width: 50ch;
+}
+
+footer {
+  color:      var(--muted-color);
+  font-size:  0.6rem;
+  text-align: center;
+
+  position:   absolute;
+  bottom:     5vh;
+  left:       10vw;
+  width:      80vw;
+}
+
+footer::after {
+  content:  "👀";
+  position: relative;
+  bottom:   -0.1em;
+}
+
+a:link    { color: var(--link-color);         }
+a:visited { color: var(--visited-link-color); }
+a:active  { color: var(--active-link-color);  }
+
+body,
+a.markdown::before,
+a.markdown::after {
+  background-color: var(--background-color);
+  color:            var(--foreground-color);
+}
+
+blockquote::before {
+  color: var(--muted-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color:  var(--heading-color);
+  margin: 1.2em 0;
+}
+
+h1 {
+  font-size:  1.5em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.35em;
+}
+
+h3 {
+  font-size: 1.15em;
+}
+
+hr {
+  color: var(--accent-color);
+}

@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+  <title>Rick Fletcher: Markdown.css</title>
+
+  <link rel="canonical" href="https://flet.ch/markdown.css.html" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAzUExURfv08tWFccBIKslhR9F5Y81tVcRUOOKqnNmSgOrDuea2qt6ejvPb1e7Px////7w8HP///28J/JUAAAARdFJOU/////////////////////8AJa2ZYgAAAGJJREFUeNqUz0kOgDAIAEDormXp/19rbW1EPcmFMAkbNH1EA1OkklRvcDsJWyiiIVpgGamDD9UhRqLoJyAIgxAA5wlaxeOmzKulw5jxD9wJtKBvoaBZhJLaw674wvv9Q4ABAPbEDVLIvFhOAAAAAElFTkSuQmCC" />
+  <link rel="stylesheet" href="css/global.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    code.example::before,
+    code.example::after {
+      content: "";
+    }
+
+    code.example {
+      background-color: var(--background-shaded-color);
+      border-radius:    5px;
+      display:          block;
+      margin:           1.3em 0;
+      padding:          0.6em 0.75em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Markdown.css</h1>
+
+    <p>
+      Write HTML, and display it as
+      <a href="https://daringfireball.net/projects/markdown/basics">Markdown</a>!
+      It's Markdown&hellip;&nbsp;backwards.
+    </p>
+
+    <hr/>
+
+    <p>
+      In other words, with Markdown.css, this&nbsp;HTML&hellip;
+    </p>
+
+    <code class="example before">This &lt;strong&gt;is&lt;/strong&gt; example HTML.</code>
+
+    <p>
+      &hellip;would be styled like&nbsp;this:
+    </p>
+
+    <code class="example after">This <strong>is</strong> example HTML.</code>
+
+    <p>
+      This page is styled with Markdown.css. Scroll down for plenty
+      <a href="#examples">more&nbsp;examples</a>.
+    </p>
+
+    <hr/>
+
+    <p>
+      Yes, this is sort of a silly project, but it was a fun way to spend a
+      couple of hours. (Besides, someday I won't want my site to look like
+      Markdown anymore, and I won't have to touch my HTML to fix that. It's CSS
+      doing what CSS does&nbsp;best!)
+    </p>
+
+    <p>
+      Markdown.css
+      <a href="https://choosealicense.com/licenses/unlicense">is in the public domain</a>,
+      and can be used by anyone for any&nbsp;purpose.
+    </p>
+
+    <p>
+      Get it&nbsp;<a href="css/markdown.css" class="markdown">here</a>.
+    </p>
+
+    <h2 id="examples">Examples</h2>
+
+    <h3>Inline Text Formatting</h3>
+
+    <p>
+      Supported formatting includes <em>italic</em>, <strong>bold</strong>,
+      and&nbsp;<del>strikethrough</del>. (If you prefer underscores over
+      asterisks, there's a CSS variable you can&nbsp;change.)
+    </p>
+
+    <p>Inline <code>&lt;code/&gt;</code> is supported, too.</p>
+
+    <h3>Block Formatting</h3>
+
+    <p>
+      Code blocks are also supported, and can be styled with
+      <q><a href="https://github.github.com/gfm/#fenced-code-blocks">fences</a></q>
+      (shown below), or&nbsp;without:
+    </p>
+
+    <pre><code>/**
+ * markdown.css
+ */</code></pre>
+
+    <p>Let's not forget about blockquotes. Nest as many as you&nbsp;like:</p>
+
+    <blockquote>
+      Lorem ipsum dolor sit amet, consectetur adipiscing&nbsp;elit.
+
+      <blockquote>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo&nbsp;consequat.
+      </blockquote>
+
+      Duis aute irure dolor in&nbsp;reprehenderit.
+    </blockquote>
+
+    <h3>Lists</h3>
+
+    <h4>Ordered</h4>
+
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+
+    <h4>Unordered</h4>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <h4>Mixed, Nested Lists</h4>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Ordered Items:
+        <ol>
+          <li>Item A</li>
+          <li>Item B</li>
+          <li>Item C</li>
+        </ol>
+      </li>
+    </ul>
+
+    <p>
+      If you prefer one of Markdown's other bullet characters over <q>-</q>, that's
+      easily changed at the top of the CSS&nbsp;file.
+    </p>
+  </main>
+</body>
+</html>

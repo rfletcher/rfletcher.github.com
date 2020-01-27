@@ -1,0 +1,134 @@
+/**
+ * Markdown.css: Make HTML look like Markdown why not.
+ */
+
+/* Markdown often provides more than one way to do things. Set your preferences. */
+:root {
+  --emphasis-token:        "*";     /* "*" or "_" */
+  --hr-replacement-text:   "* * *"; /* "* * *", "***", "- - -", etc. */
+  --unordered-list-bullet: "-";     /* "*", "+", "-" */
+  --code-block-fence-text: "```";   /* "```", "~~~" or "" */
+}
+
+/*
+  Expanding links to Markdown-style can make for some pretty verbose output.
+  We'll limit that behavior to `a.markdown`.
+*/
+a.markdown::before {
+  content:         "[";
+  display:         inline-block;
+  text-decoration: none;
+}
+a.markdown::after {
+  content:         "](" attr(href) ")";
+  display:         inline-block;
+  text-decoration: none;
+}
+
+blockquote::before {
+  /* up to 100 quoted lines. modify if you have more. */
+  content:     ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A";
+  position:    absolute;
+  margin-left: -2ch;
+  width:       1ch;
+}
+
+blockquote {
+  line-height:  1.1em;
+  padding-left: 2ch;
+  margin-left:  0;
+  margin-right: 0;
+  overflow:     hidden;
+  position:     relative;
+}
+
+blockquote blockquote {
+  margin-top:    1.1em;
+  margin-bottom: 1.1em;
+}
+
+h1, h2, h3, h4, h5, h6, hr, p, pre, ol, ul {
+  margin-bottom: 1.3em;
+}
+
+h1::before { content: "#";      }
+h2::before { content: "##";     }
+h3::before { content: "###";    }
+h4::before { content: "####";   }
+h5::before { content: "#####";  }
+h6::before { content: "######"; }
+
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before,
+li::before {
+  margin-right: 1ch;
+}
+
+hr::before {
+  content:     var(--hr-replacement-text);
+
+  position:    absolute;
+  line-height: 1em;
+  left:        0;
+  right:       0;
+}
+
+hr::after {
+  content: ".";
+  color:   transparent;
+}
+
+hr {
+  border: none;
+  height: 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+li {
+  margin-left: 2ch;
+}
+
+li::before {
+  margin-left: -2ch;
+  position:    absolute;
+}
+
+ol > li {
+  margin-left: 3.5ch;
+}
+
+ul > li {
+  list-style-type: none;
+}
+
+ul > li::before {
+  content: var(--unordered-list-bullet);
+}
+
+code, del, em, strong {
+  font-style:      normal;
+  font-weight:     normal;
+  text-decoration: none;
+}
+
+code::before,   code::after  { content: "`"; }
+del::before,    del:after    { content: "~~"; }
+em::before,     em:after     { content: var(--emphasis-token); }
+strong::before, strong:after { content: var(--emphasis-token) var(--emphasis-token); }
+
+pre > code {
+  display: block;
+}
+
+pre > code::before,
+pre > code::after {
+  color:   var(--muted-color);
+  content: var(--code-block-fence-text);
+  display: block;
+  width:   100%;
+}
