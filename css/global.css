@@ -1,12 +1,16 @@
-@import 'markdown.css';
+@import "markdown.css";
 
 /* default color scheme */
 :root {
+  --base-font-size:          0.75rem;
+  --small-font-size:         calc(var(--base-font-size) * (13/15));
+  --line-height:             1.4em;
+
   --foreground-color:        black;
   --background-color:        white;
   --background-shaded-color: #eee;
 
-  --accent-color:            darkgray;
+  --accent-color:            red;
   --heading-color:           black;
   --muted-color:             darkgray;
 
@@ -36,27 +40,68 @@
   font-family: "SF mono", menlo, inconsolata, inconsolata-dz, monospace;
   font-size:   1em;
   font-weight: normal;
-  line-height: 1.4em;
+  line-height: var(--line-height);
   margin:      0;
   padding:     0;
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
-  display:         flex;
   align-items:     center;
   justify-content: center;
 
-  font-size:       0.75rem;
+  font-size:       var(--base-font-size);
 
   margin:          0 auto;
-  min-height:      60vh;
-  padding-top:     8vw;
-  padding-bottom:  8vw;
-  width:           80vw;
+  max-width:       50ch;
+  min-height:      50vh;
+  padding:         3rem 10vw;
+}
+
+body.sparse {
+  display: flex;
 }
 
 main {
-  max-width: 50ch;
+  position: relative;
+}
+
+nav {
+  text-align: right;
+  position:   absolute;
+  top:        -2.2rem;
+  left:       0;
+  right:      0;
+}
+
+nav ol {
+  font-size: 0;
+}
+
+nav ol,
+nav li {
+  margin:  0;
+  padding: 0;
+}
+
+nav li {
+  font-size:       var(--small-font-size);
+  display:         inline-block;
+  list-style-type: none;
+}
+
+nav li::before {
+  margin: 0;
+  position: relative;
+}
+
+nav li + li::before {
+  content:   "→";
+  font-size: 1.1em;
+  padding:   0 1ch;
 }
 
 footer {
@@ -66,8 +111,6 @@ footer {
 
   position:   absolute;
   bottom:     5vh;
-  left:       10vw;
-  width:      80vw;
 }
 
 footer::after {
@@ -91,9 +134,20 @@ blockquote::before {
   color: var(--muted-color);
 }
 
+blockquote,
+dl, dt,
+h1, h2, h3, h4, h5, h6,
+hr, p,
+ol, ul {
+  margin: 1.2em 0;
+}
+
+dt {
+  margin-bottom: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color:  var(--heading-color);
-  margin: 1.2em 0;
 }
 
 h1 {
@@ -110,5 +164,29 @@ h3 {
 }
 
 hr {
-  color: var(--accent-color);
+  color: var(--muted-color);
+}
+
+dt.stale::after,
+p.footnote::before {
+  content:  "*";
+  color:    var(--accent-color);
+  display:  inline-block;
+  position: relative;
+  top:      -0.25em;
+  left:     0.3ch;
+}
+
+p.footnote::before {
+  margin-left:  -1.5ch;
+  margin-right: -0.5ch;
+}
+
+p.footnote {
+  font-size:    0.8em;
+  padding-left: 1.5ch;
+}
+
+p.intro {
+  margin-bottom: 2.4em;
 }
