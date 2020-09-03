@@ -26,7 +26,7 @@ function showSummary() {
     pct = Math.round(left/(total-1)*100);
 
     html =
-      "The <strong>2011 Phillies</strong> have " + 
+      "The <strong>" + current_year + " Phillies</strong> have " +
       ( sort_prop === "wins" ? "<strong>more wins</strong> " : "<strong>a better win percentage</strong> " ) +
       "than " +
       ( left === ( total - 1 ) ? "<strong>all " + ( total - 1 ) + "</strong> " :
