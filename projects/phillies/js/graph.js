@@ -85,18 +85,18 @@ function render() {
   graph = new Highcharts.Chart( {
     chart: {
       alignTicks: false,
-      renderTo: "graph",
-      type: "column"
+      renderTo:   "graph",
+      type:       "column"
     },
     credits: { enabled: false },
     plotOptions: { column: {
-      animation: first_render,
+      animation:    first_render,
       borderRadius: 1,
-      borderWidth: 0,
-      color: "rgba(0,0,0,0.15)",
+      borderWidth:  0,
+      color:        "rgba(0,0,0,0.15)",
       groupPadding: 0,
       pointPadding: 0.1,
-      shadow: false,
+      shadow:       false,
       states: {
         hover: {
           brightness: 0.5
@@ -115,10 +115,10 @@ function render() {
             season = _.detect( seasons, function( s ) { return s.year === year } );
 
             stats = {
-              year: season.year,
-              wins: season.wins + " wins",
+              year:   season.year,
+              wins:   season.wins + " wins",
               losses: season.losses + " losses",
-              pct: season.pct + " pct"
+              pct:    season.pct + " pct"
             };
 
         if( x_prop !== "year" ) {
@@ -149,19 +149,19 @@ function render() {
         },
         y: 18
       },
-      lineColor: "rgba(0,0,0,0.1)",
-      tickWidth: 0,
+      lineColor:      "rgba(0,0,0,0.1)",
+      tickWidth:      0,
       showFirstLabel: true,
-      showLastLabel: true,
-      title: "Wins"
+      showLastLabel:  true,
+      title:          "Wins"
     },
     yAxis: {
-      gridLineColor: "rgba(0,0,0,0.1)",
-      endOnTick: false,
-      max: max_y,
-      min: 0,
+      gridLineColor:  "rgba(0,0,0,0.1)",
+      endOnTick:      false,
+      max:            max_y,
+      min:            0,
       showFirstLabel: false,
-      title: "Wins"
+      title:          "Wins"
     }
   } );
 }
