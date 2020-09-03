@@ -1,4 +1,6 @@
-var current_year = 2020, graph, seasons;
+var current_year = (new Date()).getFullYear(),
+    selected_year = 2020,
+    graph, seasons;
 
 function calcWinPct( seasons ) {
   return _.map( seasons, function( season ) {
@@ -22,11 +24,11 @@ function showSummary() {
     html = "<strong>&nbsp;</strong>";
   } else {
     total = seasons.length
-    _.detect( seasons, function( season ) { left++; return season.year === current_year } );
+    _.detect( seasons, function( season ) { left++; return season.year === selected_year } );
     pct = Math.round(left/(total-1)*100);
 
     html =
-      "The <strong>" + current_year + " Phillies</strong> have " +
+      "The <strong>" + selected_year + " Phillies</strong> " + ( selected_year === current_year ? "have" : "had" ) + " " +
       ( sort_prop === "wins" ? "<strong>more wins</strong> " : "<strong>a better win percentage</strong> " ) +
       "than " +
       ( left === ( total - 1 ) ? "<strong>all " + ( total - 1 ) + "</strong> " :
@@ -72,7 +74,7 @@ function render() {
       id: season.year,
       y: y
     };
-    if( season.year === current_year ) {
+    if( season.year === selected_year ) {
       point.color = "rgba(198,24,0,0.8)";
     };
     return point;
@@ -123,9 +125,9 @@ function render() {
           stats[x_prop] = "<span style=\"font-weight: bold\">" + stats[x_prop] + "</span>";
         }
 
-        // if( year === current_year && ( season.wins + season.losses < 162 ) ) {
-        //   stats.year += "*";
-        // }
+        if( year === current_year && ( season.wins + season.losses < 162 ) ) {
+          stats.year += "*";
+        }
 
         label = "<span style=\"color:rgba(198,24,0,0.8); font-weight: bold; font-size: 13px;\">" + stats.year + "</span><br/>" +
           stats.wins + "<br/>" +
