@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Philadelphia Phillies by Season</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/lib/underscore.min.js"></script>
+  <script type="text/javascript" src="js/lib/highcharts.min.js"></script>
+  <script type="text/javascript" src="js/graph.js"></script>
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <h1>Philadelphia Phillies by Season</h1>
+
+      <div id="toolbar">
+        <h2>Sort By</h2>
+        <ul id="sort">
+          <li><a href="#wins">Wins</a></li>
+          <li><a href="#pct">Win Percentage</a></li>
+          <li><a href="#year">Year</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="graph"></div>
+
+    <div id="summary"></div>
+
+    <div id="footer">
+      Data from <a href="http://www.retrosheet.org">Retrosheet</a>.  The rest by <a href="http://flet.ch">Rick</a>.
+    </div>
+
+    <script type="text/javascript"> 
+      var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-105334-4']);
+          _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </div>
+</body>
+</html>
