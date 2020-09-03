@@ -1,5 +1,5 @@
 var current_year = (new Date()).getFullYear(),
-    selected_year = 2020,
+    selected_year = 2011,
     graph, seasons;
 
 function calcWinPct( seasons ) {
