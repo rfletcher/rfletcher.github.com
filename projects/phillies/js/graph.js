@@ -1,4 +1,4 @@
-var current_year = 2011, graph, seasons;
+var current_year = 2020, graph, seasons;
 
 function calcWinPct( seasons ) {
   return _.map( seasons, function( season ) {
