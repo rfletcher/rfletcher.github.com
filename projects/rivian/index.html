@@ -7,12 +7,9 @@
       --var-buffer: 50px;
     }
     * {
-      font-size:   0;
       margin:      0;
       padding:     0;
-      line-height: 0;
-      border:      none;
-/*      outline: 1px dotted red;*/
+      font-family: "helvetica", sans-serif;
     }
     body {
       background-color: var(--color-bg);
@@ -20,14 +17,14 @@
       margin-bottom:    0;
     }
     div {
-      background-position: center center;
+      background-position: center 60%;
       background-color:    var(--color-bg);
       background-size:     150%;
       background-repeat:   no-repeat;
       background-image:    var(--var-thumbnail-url); 
       cursor:              pointer;
       display:             inline-block;
-      width:               33.33333%;
+      width:               33.3333%;
       height:              33.3333%;
       margin-bottom:       var(--var-buffer);
       padding:             0;
@@ -43,6 +40,14 @@
       width:            calc(100% - (var(--var-buffer) * 2));
       top:              0;
       left:             0;
+    }
+    div.selected::before {
+      content:     attr(title);
+      font-size:   3em;
+      font-weight: bold;
+      position:    absolute;
+      top:         calc(var(--var-buffer) - 0.25em);
+      left:        var(--var-buffer);
     }
   </style>
 </head>
@@ -75,12 +80,13 @@
     Object.keys(config.colors).forEach( color_id => {
       config.views.exterior.forEach( view => {
         let properties = {
+          color_name: config.colors[color_id],
           color_id:   color_id,
           resolution: config.resolutions[0],
           view:       view,
         };
 
-        document.write(`<div style="
+        document.write(`<div title="${properties.color_name}" style="
             --var-thumbnail-url: url('${renderUrl(properties)}');
             --var-full-url:      url('${renderUrl(Object.assign(properties, { resolution: config.resolutions[config.resolutions.length - 1] }))}');
           " onclick="this.classList.toggle('selected');"></div>`
