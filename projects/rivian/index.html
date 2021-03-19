@@ -1,0 +1,91 @@
+<html>
+<head>
+  <title>Rivian</title>
+  <style>
+    :root {
+      --color-bg:   white;
+      --var-buffer: 50px;
+    }
+    * {
+      font-size:   0;
+      margin:      0;
+      padding:     0;
+      line-height: 0;
+      border:      none;
+/*      outline: 1px dotted red;*/
+    }
+    body {
+      background-color: var(--color-bg);
+      margin:           var(--var-buffer);
+      margin-bottom:    0;
+    }
+    div {
+      background-position: center center;
+      background-color:    var(--color-bg);
+      background-size:     150%;
+      background-repeat:   no-repeat;
+      background-image:    var(--var-thumbnail-url); 
+      cursor:              pointer;
+      display:             inline-block;
+      width:               33.33333%;
+      height:              33.3333%;
+      margin-bottom:       var(--var-buffer);
+      padding:             0;
+    }
+    div:hover::after {
+      background-image: var(--var-full-url);
+    }
+    div.selected {
+      position:         fixed;
+      background-image: var(--var-full-url);
+      border:           var(--var-buffer) solid var(--color-bg);
+      height:           calc(100% - (var(--var-buffer) * 2));
+      width:            calc(100% - (var(--var-buffer) * 2));
+      top:              0;
+      left:             0;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var config = {
+      colors: {
+        289: "Midnight",
+        290: "Glacier White",
+        291: "LA Silver",
+        292: "El Cap Granite",
+        293: "Forest Green",
+        294: "Rivian Blue",
+        295: "Red Canyon",
+        296: "Limestone",
+        297: "Compass Yellow",
+        298: "Launch Green",
+      },
+      resolutions: ["1024x896", "2048x1792", "3072x2688"],
+      views: {
+        exterior: ["front","side","rear"],
+        interior: [],
+      }
+    };
+
+    function renderUrl(properties) {
+      return `https://rivian.com/compimg/r1s/1.2/us/vv00000282_vv00000285_vv00000${properties.color_id}_vv00000371_vv00000545@${properties.resolution}.${properties.view}.webp`
+    }
+
+    Object.keys(config.colors).forEach( color_id => {
+      config.views.exterior.forEach( view => {
+        let properties = {
+          color_id:   color_id,
+          resolution: config.resolutions[0],
+          view:       view,
+        };
+
+        document.write(`<div style="
+            --var-thumbnail-url: url('${renderUrl(properties)}');
+            --var-full-url:      url('${renderUrl(Object.assign(properties, { resolution: config.resolutions[config.resolutions.length - 1] }))}');
+          " onclick="this.classList.toggle('selected');"></div>`
+        );
+      });
+    });
+  </script>
+</body>
