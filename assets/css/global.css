@@ -1,39 +1,10 @@
+@import "colors.css";
 @import "markdown.css";
 
-/* default color scheme */
 :root {
-  --base-font-size:          0.75rem;
-  --small-font-size:         calc(var(--base-font-size) * (13/15));
-  --line-height:             1.4em;
-
-  --foreground-color:        black;
-  --background-color:        white;
-  --background-shaded-color: #eee;
-
-  --accent-color:            red;
-  --heading-color:           black;
-  --muted-color:             darkgray;
-
-  --link-color:              blue;
-  --visited-link-color:      purple;
-  --active-link-color:       red;
-}
-
-/* dark-mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-color:        rgb(237, 237, 237);
-    --background-color:        rgb(26, 26, 26);
-    --background-shaded-color: rgb(43, 43, 44);
-
-    --accent-color:            rgb(147, 157, 115);
-    --heading-color:           rgb(204, 120, 89);
-    --muted-color:             rgb(100, 96, 101);
-
-    --link-color:              rgb(147, 157, 115);
-    --visited-link-color:      rgb(159, 141, 160);
-    --active-link-color:       rgb(199, 178, 134);
-  }
+  --base-font-size:  0.75rem;
+  --small-font-size: calc(var(--base-font-size) * (13/15));
+  --line-height:     1.4em;
 }
 
 * {
@@ -147,7 +118,7 @@ dt {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:  var(--heading-color);
+  color: var(--heading-color);
 }
 
 h1 {
