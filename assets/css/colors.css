@@ -6,7 +6,8 @@
 
   --accent-color:            red;
   --heading-color:           black;
-  --muted-color:             darkgray;
+  --muted-color:             darkgrey;
+  --border-color:            #d8d8d8;
 
   --link-color:              blue;
   --visited-link-color:      purple;
@@ -23,6 +24,7 @@
     --accent-color:            rgb(147, 157, 115);
     --heading-color:           rgb(204, 120, 89);
     --muted-color:             rgb(100, 96, 101);
+    --border-color:            rgb(100, 96, 101);
 
     --link-color:              rgb(147, 157, 115);
     --visited-link-color:      rgb(159, 141, 160);
