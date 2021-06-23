@@ -308,12 +308,12 @@ section.position + section.position {
   }
 
   :root {
-    --base-font-size: 0.6rem;
+    --base-font-size: 0.8rem;
   }
 
   body {
     max-width: none;
-    padding:   0 3rem 2rem;
+    padding:   0;
   }
 
   * { -webkit-print-color-adjust: exact; }
