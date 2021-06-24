@@ -79,8 +79,8 @@ address a::after {
 
 address a.email::after    { content: "\e0be"; }
 address a.link::after     { content: "\e157"; }
-address a.location::after { content: "\e55f"; }
-address a.phone::after    { content: "\e0cd"; }
+address a.location::after { content: "\e55f"; margin-bottom: 0.1em; }
+address a.phone::after    { content: "\e0cd"; margin-bottom: 0.1em; }
 
 h1, h2, h3, h4,
 hr {
@@ -99,6 +99,7 @@ h5, h6, p, ol, ul {
 h1 {
   font-family:   "Gill Sans", "Helvetica Neue", "Helvetica", sans-serif;
   font-size:     3em;
+  font-weight:   600;
   margin-bottom: 0.33em;
   margin-top:    0;
 }
@@ -160,7 +161,7 @@ section.company > header dd {
   line-height: inherit;
 }
 section.company h3 {
-  margin-bottom: 0.8em;
+  margin: 0.8em 0;
 }
 section.company h3 ol {
   font-size:       0;
@@ -181,6 +182,7 @@ section.company h3 li::after {
   display:             inline-block;
   content:             "";
   height:              1em;
+  image-rendering:     crisp-edges;
   width:               1.1em;
   line-height:         0.9em;
   vertical-align:      middle;
@@ -233,7 +235,7 @@ section.position {
   border-left:  1px solid var(--border-color);
   padding-left: 1.4ch;
   position:     relative;
-  margin:       1.4em 0 0 2.5ch;
+  margin:       1.4em 0 0 2ch;
 }
 section.position h4 {
   margin: 0;
@@ -267,7 +269,7 @@ section.position .tech {
   font-size:        0.8em;
   padding-top:      1.2em;
   padding-left:     1.2em;
-  width:            12%;
+  width:            11.75%;
 }
 section.position .tech h5 {
   font-weight: bold;
@@ -282,7 +284,7 @@ section.position .tech li        { list-style-type: "●     "; }
 section.position .tech li.expert { list-style-type: "+     "; }
 section.position > ul {
   margin-bottom: 0;
-  margin-right:  17%;
+  margin-right:  16%;
 }
 section.position + section.position {
   padding-top: 2em;
@@ -300,20 +302,14 @@ section.position + section.position {
 }
 
 @media print {
-  @page {
-    margin-top: 4rem;
-  }
-  @page :first {
-    margin-top: 0;
-  }
-
   :root {
     --base-font-size: 0.8rem;
+    --line-height:    1.4em;
   }
 
   body {
     max-width: none;
-    padding:   0;
+    padding:   0.5ch 1ch;
   }
 
   * { -webkit-print-color-adjust: exact; }
@@ -321,12 +317,27 @@ section.position + section.position {
   .for-print { display: initial; }
   address a.for-print { display: block; }
 
+  .for-screen { display: none; }
+
+  address a::after {
+    margin-bottom: 0.1em;
+  }
+  address a.location::after { margin-bottom: 0.1em; }
+  address a.phone::after    { margin-bottom: 0.1em; }
+
+  body > header {
+    margin-top: -1em;
+  }
+
+  h2 {
+    margin: 0.8em 0;
+  }
+
   section.company {
     break-inside: avoid;
   }
 
   section.position h4::before {
-    left: -2.45ch;
-    top:  0;
+    left: -2.4ch;
   }
 }
