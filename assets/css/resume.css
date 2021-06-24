@@ -79,7 +79,7 @@ address a::after {
 
 address a.email::after    { content: "\e0be"; }
 address a.link::after     { content: "\e157"; }
-address a.location::after { content: "\e55f"; margin-bottom: 0.1em; }
+address a.location::after { content: "\e55f"; line-height: 1.1; }
 address a.phone::after    { content: "\e0cd"; margin-bottom: 0.1em; }
 
 h1, h2, h3, h4,
@@ -213,7 +213,6 @@ section.company h3 li.rupture::before { background-image: url(../images/logos/ru
 section.company h3 li.viglink::before { background-image: url(../images/logos/viglink.png); }
 section.company h3 li.ea::before      {
   background-image: url(../images/logos/ea.png);
-  filter:           opacity(50%) hue-rotate(90deg);
   margin-bottom:    0.2em;
   width:            1.6em;
 }
@@ -250,7 +249,7 @@ section.position h4::before {
   display:          block;
   content:          " ";
   left:             -2.22ch;
-  top:              0.32ch;
+  top:              0.25em;
 }
 section.position header {
   margin-bottom: -4px;
@@ -334,10 +333,11 @@ section.position + section.position {
   }
 
   section.company {
-    break-inside: avoid;
+/*    break-inside: avoid;*/
   }
 
   section.position h4::before {
     left: -2.4ch;
+    top:  0.18em;
   }
 }
