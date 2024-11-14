@@ -144,18 +144,18 @@ p.footnote::before {
   color:    var(--accent-color);
   display:  inline-block;
   position: relative;
-  top:      -0.25em;
-  left:     0.3ch;
+  top:      -0.2em;
+  margin:   0 0.1ch;
 }
 
 p.footnote::before {
-  margin-left:  -1.5ch;
+  margin-left:  -1.8ch;
   margin-right: -0.5ch;
 }
 
 p.footnote {
   font-size:    0.8em;
-  padding-left: 1.5ch;
+  padding-left: 1.8ch;
 }
 
 p.intro {
