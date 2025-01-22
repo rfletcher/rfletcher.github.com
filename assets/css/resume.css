@@ -41,6 +41,10 @@ body {
   padding:         3rem 10vw 6rem;
 }
 
+em {
+  font-style: italic;
+}
+
 main {
   position: relative;
 }
@@ -56,10 +60,11 @@ a:hover   {
 
 address {
   position:   absolute;
-  width:      40ch;
+  width:      30ch;
+  font-size:  0.9em;
   text-align: right;
   right:      0;
-  top:        0.8em;
+  top:        1em;
 }
 
 address a {
@@ -71,16 +76,16 @@ address a::after {
   color:          var(--muted-color);
   display:        inline-block;
   font-family:    "Material Icons";
-  line-height:    1em;
-  margin:         0 0 0 0.75ex;
+  line-height:    0.9em;
+  margin:         0 0 0.1em 0.3em;
   text-align:     center;
   vertical-align: text-bottom;
 }
 
 address a.email::after    { content: "\e0be"; }
 address a.link::after     { content: "\e157"; }
-address a.location::after { content: "\e55f"; line-height: 1.1; }
-address a.phone::after    { content: "\e0cd"; margin-bottom: 0.1em; }
+address a.location::after { content: "\e55f"; }
+address a.phone::after    { content: "\e0cd"; }
 
 h1, h2, h3, h4,
 hr {
@@ -122,7 +127,7 @@ ul ul {
 }
 
 body > header p.intro {
-  max-width: 65ch;
+  max-width: 70ch;
 }
 
 header dl {
@@ -146,6 +151,10 @@ header dd::after {
 }
 header dd:last-child::after {
   content: "";
+}
+
+section#lessons ul {
+  /* columns: 2; */
 }
 
 section.company > header dl {
@@ -173,6 +182,7 @@ section.company h3 li {
   display:     inline-block;
   font-size:   calc(var(--base-font-size) * 1.25);
   font-weight: bold;
+  /* outline: 1px dotted red; */
 }
 section.company h3 li::before,
 section.company h3 li::after {
@@ -188,6 +198,7 @@ section.company h3 li::after {
   vertical-align:      middle;
   margin-bottom:       0.25em;
   margin-right:        0.15em;
+  /* outline: 1px dotted red; */
 }
 section.company h3 li::after {
   content:      "+";
@@ -196,6 +207,7 @@ section.company h3 li::after {
   margin-right: 0.6ch;
   margin-top:   -0.1em;
   text-align:   center;
+  /* outline: 1px dotted red; */
 }
 section.company h3 li:last-child::after {
   display: none;
@@ -209,8 +221,13 @@ section.company > header .intro {
 section.company + section.company {
   margin-top: 3em;
 }
+section.company h3 li.duo::before     { background-image: url(../images/logos/duo.png);     }
 section.company h3 li.rupture::before { background-image: url(../images/logos/rupture.png); }
 section.company h3 li.viglink::before { background-image: url(../images/logos/viglink.png); }
+section.company h3 li.cisco::before      {
+  background-image: url(../images/logos/cisco.png);
+  width:            1.5em;
+}
 section.company h3 li.ea::before      {
   background-image: url(../images/logos/ea.png);
   margin-bottom:    0.2em;
@@ -302,13 +319,13 @@ section.position + section.position {
 
 @media print {
   :root {
-    --base-font-size: 0.8rem;
+    --base-font-size: 0.7rem;
     --line-height:    1.4em;
   }
 
   body {
     max-width: none;
-    padding:   0.5ch 1ch;
+    padding:   0.5in;
   }
 
   * { -webkit-print-color-adjust: exact; }
@@ -318,11 +335,15 @@ section.position + section.position {
 
   .for-screen { display: none; }
 
-  address a::after {
-    margin-bottom: 0.1em;
+  address a {
+    /* outline: 1px dotted red; */
   }
-  address a.location::after { margin-bottom: 0.1em; }
-  address a.phone::after    { margin-bottom: 0.1em; }
+  address a::after {
+    /* outline: 1px dotted red; */
+    /* margin-bottom: 0.1em; */
+  }
+  address a.link::after  { margin-bottom: 0; }
+  address a.email::after { margin-bottom: 0; }
 
   body > header {
     margin-top: -1em;
