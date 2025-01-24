@@ -170,7 +170,7 @@ section.company > header dd {
   line-height: inherit;
 }
 section.company h3 {
-  margin: 0.8em 0;
+  margin: 0.8em 0 0;
 }
 section.company h3 ol {
   font-size:       0;
@@ -216,10 +216,10 @@ section.company > header dd {
   line-height: 1.8em;
 }
 section.company > header .intro {
-  margin: 1em 0 1.5em;
+  margin: 1em 0 1.5em 1.5em;
 }
 section.company + section.company {
-  margin-top: 3em;
+  margin-top: 2em;
 }
 section.company h3 li.duo::before     { background-image: url(../images/logos/duo.png);     }
 section.company h3 li.rupture::before { background-image: url(../images/logos/rupture.png); }
@@ -253,6 +253,10 @@ section.position {
   position:     relative;
   margin:       1.4em 0 0 2ch;
 }
+section.position:not(:has(ul)) + section.position {
+  margin-top: 0;
+  padding-top: 1em;
+}
 section.position h4 {
   margin: 0;
 }
@@ -283,9 +287,13 @@ section.position .tech {
   position:         absolute;
   right:            0;
   font-size:        0.8em;
-  padding-top:      1.2em;
+  padding-top:      1em;
   padding-left:     1.2em;
   width:            11.75%;
+}
+#experience section.position .tech {
+  margin-top:  -3em;
+  padding-top: 0;
 }
 section.position .tech h5 {
   font-weight: bold;
@@ -307,6 +315,40 @@ section.position + section.position {
   margin-top:  0;
 }
 
+#download {
+  display:          inline-block;
+  padding:          0.6em 0.55em 0.25em 0.65em;
+  position:         absolute;
+  top:              0.9em;
+  right:            -3.5em;
+  background-color: var(--background-shaded-color);
+  color:            var(--muted-color);
+  border-radius:    0.5em;
+  text-wrap: none;
+}
+#download span {
+  display:          inline-block;
+  background-color: var(--muted-accent-color);
+  color:            var(--background-color);
+  position:         relative;
+  overflow:         hidden;
+  padding:          0.15em;
+  font-size:        0.6em;
+  line-height:      4em;
+  text-align:       center;
+  width:            2em;
+  height:           2.5em;
+}
+#download span::before {
+  content:      "";
+  position:     absolute;
+  top:          0;
+  right:        0;
+  border-width: 0 0.75em 0.75em 0;
+  border-style: solid;
+  border-color: var(--foreground-color) var(--background-shaded-color);
+}
+
 @media (prefers-color-scheme: dark) {
   section.company h3 li::after {
     content: "/";
@@ -319,19 +361,21 @@ section.position + section.position {
 
 @media print {
   :root {
-    --base-font-size: 0.7rem;
+    --base-font-size: 0.75rem;
     --line-height:    1.4em;
   }
 
   body {
-    max-width: none;
-    padding:   0.5in;
+    max-width:      none;
+    padding:        0.5in;
+    padding-bottom: 0;
   }
 
   * { -webkit-print-color-adjust: exact; }
 
   .for-print { display: initial; }
   address a.for-print { display: block; }
+  li.for-print { display: list-item; }
 
   .for-screen { display: none; }
 
@@ -350,15 +394,33 @@ section.position + section.position {
   }
 
   h2 {
-    margin: 0.8em 0;
+    margin-top: 2em;
   }
 
-  section.company {
-/*    break-inside: avoid;*/
+  section.company + section.company {
+    margin-top: 1.7em;
+  }
+
+  section.company > header .intro {
+    margin-top: 0.25em;
   }
 
   section.position h4::before {
-    left: -2.4ch;
+    left: -2.5ch;
     top:  0.18em;
+  }
+
+  section.position .tech {
+    font-size:   0.9em;
+  }
+
+  #download {
+    display: none;
+  }
+
+  #experience {
+    font-size:         0.7rem;
+    padding-top:       1em;
+    page-break-before: always;
   }
 }

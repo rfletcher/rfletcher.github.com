@@ -5,6 +5,7 @@
   --background-shaded-color: #eee;
 
   --accent-color:            red;
+  --muted-accent-color:      indianred;
   --heading-color:           black;
   --muted-color:             #999;
   --border-color:            #d8d8d8;
@@ -22,6 +23,7 @@
     --background-shaded-color: rgb(43, 43, 44);
 
     --accent-color:            rgb(204, 120, 89);
+    --muted-accent-color:      rgb(164, 80, 69);
     --heading-color:           rgb(204, 120, 89);
     --muted-color:             rgb(100, 96, 101);
     --border-color:            rgb(100, 96, 101);

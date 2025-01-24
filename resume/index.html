@@ -2,7 +2,6 @@
 <html>
 <head>
   <meta charset="utf-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Rick Fletcher</title>
@@ -27,6 +26,8 @@
       <a href="https://flet.ch/resume" class="link for-print">flet.ch/resume</a>
     </address>
 
+    <script>wa("PGEgaHJlZj0icmZsZXRjaGVyLX"+"Jlc3VtZS5wZGYiIGlkPSJkb3dubG9hZCIgdGl"+"0bGU9IkRvd25sb2FkIGEgKHNsaWdodGx5IGFicm"+"lkZ2VkKSBQREYiPjxzcGFuPlBERjwvc3Bhbj48L2E+");</script>
+
     <p class="intro">
       Experienced technologist with a current focus on secure, highly-available,
       scalable infrastructure, and strong interests in automation, developer
@@ -35,9 +36,9 @@
   </header>
 
   <main>
-    <section id="lessons">
-      <h2>Lessons Learned</h2>
-  
+    <section>
+      <h4>Guiding Principles</h4>
+
       <p class="intro">
         Some personal beliefs about working together and building technology:
       </p>
@@ -45,28 +46,24 @@
       <ul>
         <li>
           Culture matters. I'm passionate about helping to build strong,
-          healthy, supportive, collaborative, productive teams.
+          supportive, productive teams.
         </li>
-        <li>Simplicity and incremental improvement are best.</li>
+        <li>Simplicity and incremental improvements are best.</li>
         <li>
-          Security can be user-friendly. Make the secure path the easy path.
-        </li>
-        <li>
-          Groundbreaking technology is rare. Understand why a new
-          trend is interesting, but favor proven, boring solutions.
+          Security can be user-friendly. Strive to make the secure path the
+          easy path.
         </li>
         <li>
-          Technology is powerful, and abusers are clever. Remember the
-          vulnerable; mitigate abuse.
+          Groundbreaking technology is rare. Understand why a trend is
+          interesting, but favor proven, &quot;boring&quot; solutions.
         </li>
         <li>
-          Technology is powerful, and abusers are clever. Work isn't done until
-          we've thought about how it might be used against the vulnerable, and
-          mitigated that abuse.
+          Remember the vulnerable. Include accessibility, and mitigate misuse
+          by abusers.
         </li>
         <li>
-          Learning and communication are paramount. Strengthen those muscles
-          whenever possible.
+          Clarity of communication and the ability to learn are everything.
+          Strengthen those muscles whenever possible.
         </li>
       </ul>
     </section>
@@ -95,7 +92,7 @@
   
         <section class="position">
           <header>
-            <h4>Technical Lead, Site Reliability Engineering</h4>
+            <h4>Technical Lead, SRE Infrastructure</h4>
   
             <dl>
               <dt>Location</dt>
@@ -113,13 +110,67 @@
               <li><a href="https://www.datadog.com">Datadog</a></li>
               <li><a href="http://www.grafana.com">Grafana</a></li>
               <li class="expert"><a href="https://www.kubernetes.io">Kubernetes</a></li>
+              <li><a href="https://www.openpolicyagent.org" title="Open Policy Agent">OPA/Rego</a></li>
               <li><a href="https://www.python.org">Python</a></li>
               <li class="expert"><a href="https://www.terraform.io">Terraform</a></li>
             </ul>
           </div>
   
           <ul>
-            <li>TODO
+            <li>
+              Ownership and operation of Duo's multi-tenant Kubernetes platform,
+              with my team. Personal contributions include:
+              <ul>
+                <li>
+                  Introduction of applied policy: Configuration is checked
+                  during continuous integration, with Conftest, and in-cluster,
+                  with a custom admission controller, enforcing best practices
+                  and improving security posture.
+                </li>
+                <li>
+                  Design and delivery of a live, FedRAMP-compliant image
+                  inventory system.
+                </li>
+                <li>
+                  Consolidation of tests under Kubernetes-native
+                  orchestration, providing a standard interface for defining
+                  all types of tests, and recording results.
+                </li>
+                <li>
+                  Migration of existing applications and services into
+                  Kubernetes, working along side the responsible engineering
+                  teams.
+                </li>
+                <li>
+                  Maintenance: Platform simplification and modernization;
+                  Expansion to new regions; Cluster version upgrades (including
+                  migration to alternative technologies as features are
+                  deprecated or removed by the Kubernetes project), etc.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Streamlined developer experience, providing tools and services to
+              reduce toil and improve development security and efficiency.
+            </li>
+            <li>
+              Quickly diagnosed and resolved production incidents as a member of
+              the on-call rotation; held post-mortem discussions; prioritized
+              resulting improvements to products and monitoring/alerting.
+            </li>
+            <li>
+              Performed operational readiness reviews of pre-release Duo
+              products and features, identifying any gaps in security,
+              scalability, monitoring/alerting, documentation, etc.
+            </li>
+            <li>
+              Wrote custom software, primarily in Python, to automate
+              critical operational needs.
+            </li>
+            <li>
+              Participated in short and long term planning with other leads,
+              architects, and management, to plan outcomes in support of the
+              broader business.
             </li>
           </ul>
         </section>
@@ -147,49 +198,7 @@
             Services for digital publishers; acquired by Sovrn in 2019
           </p>
         </header>
-  
-        <section class="position">
-          <header>
-            <h4>Staff Site Reliability Engineer (Sovrn)</h4>
-  
-            <dl>
-              <dt>Location</dt>
-              <dd>Remote</dd>
-              <dt>Period</dt>
-              <dd>2019&ndash;2021</dd>
-            </dl>
-          </header>
-  
-          <div class="tech">
-            <h5>Key Tools &amp; Tech</h5>
-            <ul>
-              <li class="expert"><a href="https://aws.amazon.com">AWS</a></li>
-              <li><a href="https://www.ansible.com">Ansible</a></li>
-              <li><a href="https://www.datadog.com">Datadog</a></li>
-              <li><a href="https://www.docker.com">Docker</a></li>
-              <li><a href="https://www.kubernetes.io">Kubernetes</a></li>
-              <li class="expert"><a href="https://www.terraform.io">Terraform</a></li>
-              <li class="expert"><a href="https://www.ubuntu.com">Ubuntu</a></li>
-            </ul>
-          </div>
-  
-          <ul>
-            <li>
-              Updated and integrated legacy VigLink and Sovrn infrastructure,
-              post-acquisition
-            </li>
-            <li>
-              Evaluated emerging technologies, made recommendations for use, and
-              worked with engineering on implementation
-            </li>
-            <li>Introduced Kubernetes, migrating legacy applications</li>
-            <li>
-              Designed and built a complete, automated, multi-headed development
-              environment with GitOps and Kubernetes
-            </li>
-          </ul>
-        </section>
-  
+
         <section class="position">
           <header>
             <h4>Staff Site Reliability Engineer</h4>
@@ -198,7 +207,7 @@
               <dt>Location</dt>
               <dd>Remote</dd>
               <dt>Period</dt>
-              <dd>2012&ndash;2019</dd>
+              <dd>2012&ndash;2021</dd>
             </dl>
           </header>
   
@@ -206,10 +215,10 @@
             <h5>Key Tools &amp; Tech</h5>
             <ul>
               <li class="expert"><a href="https://aws.amazon.com">AWS</a></li>
+              <li class="for-screen"><a href="https://www.ansible.com">Ansible</a></li>
               <li><a href="https://www.docker.com">Docker</a></li>
-              <li><a href="https://www.jenkins.io">Jenkins</a></li>
-              <li><a href="https://www.nagios.org">Nagios</a></li>
-              <li><a href="https://www.sonatype.com/products/repository-oss" class="expert">Nexus</a></li>
+              <li class="for-screen"><a href="https://www.jenkins.io">Jenkins</a></li>
+              <li><a href="https://www.kubernetes.io">Kubernetes</a></li>
               <li class="expert"><a href="https://www.puppet.com">Puppet</a></li>
               <li class="expert"><a href="https://www.terraform.io">Terraform</a></li>
               <li class="expert"><a href="https://www.ubuntu.com">Ubuntu</a></li>
@@ -218,21 +227,39 @@
   
           <ul>
             <li>
-              Formalized infrastructure management using Terraform and Puppet
+              Formalized infrastructure management using Terraform and Puppet.
             </li>
             <li>
-              Developed applications to integrate existing configuration
-              management systems during architectural transitions
+              Designed systems to allow incremental change during architectural
+              transitions<span class="for-print">.</span><span class="for-screen">,
+              such as:</span>
+              <ul class="for-screen">
+                <li>
+                  A web proxy which intelligently routed requests to one of two
+                  backend applications, as a new app was built out, slowly
+                  replacing old.
+                </li>
+                <li>
+                  A secrets provider capable of propagating secrets as
+                  environmental variables to legacy application servers running
+                  Tomcat, and as Secret resources in Kubernetes.
+                </li>
+              </ul>
             </li>
             <li>
-              Analyzed and reduced AWS spending by 30%, even as demand doubled
+              Analyzed and reduced AWS spending by 30%, even as demand doubled.
             </li>
-            <li>
+            <li class="for-screen">
               Partnered with engineering teams to: instill availability,
               scalability, security, and cost considerations as standard
               practice; decompose a traditional monolith into microservices in
               containers; establish on-call practices, and support their role
-              in the regular rotation
+              in the regular rotation.
+            </li>
+            <li class="for-print">
+              Partnered with engineering teams to instill best practices,
+              deliver new services, and establish/support their participation in
+              the on-call rotation.
             </li>
           </ul>
         </section>
@@ -243,15 +270,9 @@
   
             <dl>
               <dt>Location</dt>
-              <dd>Remote</dd>
+              <dd>San Francisco, CA &amp; Remote</dd>
               <dt>Period</dt>
-              <dd>2011&ndash;2012</dd>
-            </dl>
-            <dl>
-              <dt>Location</dt>
-              <dd>San Francisco, CA</dd>
-              <dt>Period</dt>
-              <dd>2009&ndash;2011</dd>
+              <dd>2009&ndash;2012</dd>
             </dl>
           </header>
   
@@ -263,24 +284,21 @@
               <li class="expert"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a></li>
               <li><a href="https://www.mysql.com">MySQL</a></li>
               <li class="expert"><a href="https://rubyonrails.org">Ruby/Rails</a></li>
-              <li class="expert"><a href="https://www.ubuntu.com">Ubuntu</a></li>
             </ul>
           </div>
   
           <ul>
             <li>
-              Sole developer of the VigLink javascript library, used on
-              300k customer web sites, with well over 1 billion daily views
+              Sole developer of the VigLink Javascript library, installed on
+              300k customer web sites, totaling well over 1 billion daily views.
             </li>
             <li>
-              Built an automated javascript testing toolkit, continuously
-              validating a large test suite across multiple browsers and
-              operating systems
+              Built a system for continuously validating a large javascript
+              test suite across multiple browsers.
             </li>
-            <li>Wrote plug-ins for various popular forum and blog platforms</li>
             <li>
               Designed, developed, and maintained all internal and external web
-              applications
+              applications, and various forum/blog plug-ins.
             </li>
           </ul>
         </section>
@@ -321,7 +339,7 @@
             <h5>Key Tools &amp; Tech</h5>
             <ul>
               <li class="expert"><a href="https://aws.amazon.com">AWS</a></li>
-              <li><a href="https://www.adobe.com/products/air/">Adobe&nbsp;Air</a></li>
+              <li class="for-screen"><a href="https://www.adobe.com/products/air/">Adobe&nbsp;Air</a></li>
               <li class="expert"><a href="https://httpd.apache.org">Apache</a></li>
               <li><a href="https://www.mysql.com">MySQL</a></li>
               <li class="expert"><a href="https://rubyonrails.org">Ruby/Rails</a></li>
@@ -331,16 +349,15 @@
   
           <ul>
             <li>
-              Worked alongside designers and product managers to plan, design
-              and develop a social network tailored to gamers
+              Worked with product managers to plan and develop a social network
+              tailored to video gaming.
             </li>
             <li>
-              Collaborated with in-house and external design teams on company and
-              product branding; carried out a complete brand redesign
+              Carried out a brand redesign, in collaboration with in-house and
+              external design teams.
             </li>
             <li>
-              Contributed to a Rupture desktop application for Electronic Arts,
-              which included social features, news, and direct video game sales
+              Contributed to a Rupture desktop application for Electronic Arts.
             </li>
           </ul>
         </section>
@@ -371,21 +388,6 @@
               <dd>2005&ndash;2007</dd>
             </dl>
           </header>
-  
-          <ul>
-            <li>
-              Managed a highly productive team of web applications engineers
-            </li>
-            <li>
-              Led a successful transition of the entire product/engineering
-              organization from a waterfall development process to an iterative,
-              Agile process
-            </li>
-            <li>
-              Collaborated with various stakeholders on an ongoing basis to set
-              short- and long-term&nbsp;priorities
-            </li>
-          </ul>
         </section>
   
         <section class="position">
@@ -405,6 +407,7 @@
             <ul>
               <li class="expert"><a href="https://httpd.apache.org">Apache</a></li>
               <li><a href="https://getfedora.org">Fedora</a></li>
+              <li><a href="https://www.nagios.org">Nagios</a></li>
               <li><a href="https://www.oracle.com/database">Oracle</a></li>
               <li class="expert"><a href="https://www.php.net">PHP</a></li>
             </ul>
@@ -413,16 +416,15 @@
           <ul>
             <li>
               Built and maintained multiple specialized versions of a digital
-              music rights management application, tailored to different
-              audiences
+              music management application.
             </li>
             <li>
-              Worked with product managers, designers, and external partners to
-              build an embedded music store for the web
+              Worked across internal teams and external partners to build an
+              embedded music store.
             </li>
             <li>
               Provided support to customers integrating SNOCAP music stores into
-              their web sites
+              their web sites.
             </li>
           </ul>
         </section>
@@ -459,8 +461,8 @@
             <ul>
               <li class="expert"><a href="https://httpd.apache.org">Apache</a></li>
               <li><a href="https://www.mysql.com">MySQL</a></li>
-              <li><a href="https://www.perl.org">Perl</a></li>
               <li class="expert"><a href="https://www.php.net">PHP</a></li>
+              <li><a href="https://www.perl.org">Perl</a></li>
               <li><a href="https://en.wikipedia.org/wiki/Red_Hat_Linux">RedHat</a></li>
             </ul>
           </div>
@@ -468,12 +470,12 @@
           <ul>
             <li>
               Designed, developed, and maintained all internal and external
-              web applications, including napster.com
+              web applications.
             </li>
-            <li>Developed web deployment processes and tools</li>
+            <li>Developed web deployment processes and tools.</li>
             <li>
               Managed of a cluster of web servers (configured software, applied
-              security patches, etc.)
+              security patches, etc.).
             </li>
           </ul>
         </section>
